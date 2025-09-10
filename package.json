@@ -1,0 +1,28 @@
+{
+  "name": "rimal-strategic-advisory",
+  "version": "1.0.0",
+  "description": "Rimal Strategic Advisory - IT Services & Consulting website",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx http-server . -p 8000 -o",
+    "dev": "npx http-server . -p 8000 -o -c-1",
+    "build": "echo 'Static site - no build required'",
+    "deploy": "gh-pages -d ."
+  },
+  "keywords": [
+    "consulting",
+    "strategic-advisory",
+    "digital-transformation"
+  ],
+  "author": "Ahmad Abuhamda",
+  "license": "ISC",
+  "devDependencies": {
+    "http-server": "^14.1.1",
+    "gh-pages": "^6.1.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Moka143/abu_hamda.git"
+  },
+  "homepage": "https://moka143.github.io/abu_hamda"
+}

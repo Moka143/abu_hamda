@@ -1,11 +1,27 @@
-# Local HTTP server for this workspace
+# Rimal Strategic Advisory Website
 
-This repository contains `index.html` and related assets. To serve the files on port 8000 using Python:
+Strategic guidance, delivery & implementation oversight and scalable solutions for startups.
 
-Open PowerShell in this folder and run:
+## 🚀 Quick Deploy with GitHub Copilot
 
-```powershell
-python serve.py
+This repository is set up for easy deployment and development with GitHub Copilot:
+
+**Live Website**: https://moka143.github.io/abu_hamda
+
+### Local Development
+
+```bash
+npm install
+npm start
 ```
 
-Then open http://localhost:8000 in your browser.
+This will start a local server at http://localhost:8000
+
+### Automatic Deployment
+
+- Push to `main` branch → Automatically deploys to GitHub Pages
+- No build step required - pure static HTML/CSS/JS
+
+## 📖 Full Documentation
+
+See [DEPLOYMENT.md](DEPLOYMENT.md) for complete setup and deployment instructions.
