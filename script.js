@@ -17,12 +17,8 @@ document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', 
 window.addEventListener('scroll', () => {
     const navbar = document.querySelector('.navbar');
     if (window.scrollY > 100) {
-        navbar.style.background = '#cba662';
-        navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
         navbar.classList.add('scrolled');
     } else {
-        navbar.style.background = '#cba662';
-        navbar.style.boxShadow = 'none';
         navbar.classList.remove('scrolled');
     }
 });
@@ -41,33 +37,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Form submission handler
-const contactForm = document.querySelector('.contact-form form');
-if (contactForm) {
-    contactForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        // Get form data
-        const formData = new FormData(this);
-        const name = this.querySelector('input[type="text"]').value;
-        const email = this.querySelector('input[type="email"]').value;
-        const company = this.querySelectorAll('input[type="text"]')[1].value;
-        const service = this.querySelector('select').value;
-        const message = this.querySelector('textarea').value;
-        
-        // Simple validation
-        if (!name || !email || !message) {
-            alert('Please fill in all required fields.');
-            return;
-        }
-        
-        // Show success message (in a real application, you would send this to a server)
-        alert('Thank you for your message! We will get back to you soon.');
-        
-        // Reset form
-        this.reset();
-    });
-}
+
 
 // Intersection Observer for animations
 const observerOptions = {
@@ -242,8 +212,8 @@ if (heroSection) {
         if (numberOfParticles > 150) numberOfParticles = 150; // Cap particles
         for (let i = 0; i < numberOfParticles; i++) {
             let size = (Math.random() * 2) + 1;
-            let x = (Math.random() * ((innerWidth - size * 2) - (size * 2)) + size * 2);
-            let y = (Math.random() * ((innerHeight - size * 2) - (size * 2)) + size * 2);
+            let x = (Math.random() * ((canvas.width - size * 2) - (size * 2)) + size * 2);
+            let y = (Math.random() * ((canvas.height - size * 2) - (size * 2)) + size * 2);
             let directionX = (Math.random() * .4) - .2;
             let directionY = (Math.random() * .4) - .2;
             let color = 'rgba(255, 255, 255, 0.6)';
@@ -254,7 +224,7 @@ if (heroSection) {
     // Animation loop
     function animateParticles() {
         requestAnimationFrame(animateParticles);
-        ctx.clearRect(0, 0, innerWidth, innerHeight);
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
         for (let i = 0; i < particlesArray.length; i++) {
             particlesArray[i].update();
         }
@@ -274,10 +244,12 @@ styleSheet.innerText = `
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 1; /* Ensure it's behind hero content */
+    z-index: 0;
+    pointer-events: none;
+    overflow: hidden;
 }
 .hero-container {
-    position: relative; /* Ensure hero content is above particles */
+    position: relative;
     z-index: 2;
 }
 `;

@@ -4,20 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rimal Strategic Advisory - IT Services & Consulting</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!-- Scroll Progress Indicator -->
-    <div class="scroll-indicator"></div>
+    <div class="scroll-indicator" id="scrollIndicator"></div>
     
     <!-- Navigation -->
-    <nav class="navbar">
+    <nav class="navbar" id="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <a href="#home"><img src="rimallogo.jpg" alt="Rimal Strategic Advisory Logo" id="navbar-logo"></a>
-                <h2>Rimal Strategic Advisory</h2>
+                <a href="#home"><img src="rimallogo_transparent.png" alt="Rimal Strategic Advisory Logo" id="navbar-logo"></a>
             </div>
             <ul class="nav-menu">
                 <li class="nav-item">
@@ -48,7 +47,8 @@
     <section id="home" class="hero">
         <div class="hero-container">
             <div class="hero-content">
-                <h1 class="hero-title">Strategic Guidance for Digital Excellence</h1>
+                <h1 class="hero-company-name">Rimal Strategic Advisory</h1>
+                <h2 class="hero-title">Strategic Guidance for Digital Excellence</h2>
                 <p class="hero-subtitle">We provide strategic guidance, delivery & implementation oversight and scalable solutions for startups</p>
                 <div class="hero-buttons">
                     <a href="#services" class="btn btn-primary">Our Services</a>
@@ -109,42 +109,42 @@
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-icon">
-                        <i class="fas fa-route"></i>
+                        <i class="fas fa-map-marked-alt"></i>
                     </div>
                     <h3>Product Roadmapping</h3>
                     <p>Assessing existing products, aligning them with business objectives, and structuring a modernization strategy with a clear execution plan.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
-                        <i class="fas fa-tasks"></i>
+                        <i class="fas fa-project-diagram"></i>
                     </div>
                     <h3>Delivery & Implementation Oversight</h3>
                     <p>Ensuring high-quality, on-time, and on-budget execution of digital initiatives with comprehensive project management.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
-                        <i class="fas fa-users"></i>
+                        <i class="fas fa-users-cog"></i>
                     </div>
                     <h3>Vendor & Offshore Team Setup</h3>
                     <p>Helping startups scale efficiently by setting up and managing vendor and offshore technical teams with proven leadership strategies.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
-                        <i class="fas fa-robot"></i>
+                        <i class="fas fa-brain"></i>
                     </div>
                     <h3>Digital Transformation & Innovation</h3>
                     <p>Guiding the adoption of AI, automation, and emerging technologies to keep your company competitive in the digital landscape.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
-                        <i class="fas fa-handshake"></i>
+                        <i class="fas fa-chart-line"></i>
                     </div>
                     <h3>Pre-Sales & Business Development</h3>
                     <p>Strengthening proposals, RFP responses, and pitch strategy to enhance your business development capabilities.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
-                        <i class="fas fa-lightbulb"></i>
+                        <i class="fas fa-cogs"></i>
                     </div>
                     <h3>IT Advisory</h3>
                     <p>Strategic technology consulting to optimize your IT infrastructure and align technology investments with business goals.</p>
@@ -193,49 +193,43 @@
                 <p>Ready to transform your business? Let's discuss your strategic technology needs</p>
             </div>
             <div class="contact-content">
-                <div class="contact-info">
+                <div class="contact-info-grid">
                     <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div>
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
                             <h4>Location</h4>
                             <p>Plano, Texas 75023, US</p>
                         </div>
                     </div>
                     <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <div>
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
                             <h4>Email</h4>
-                            <p>ahmad@rimalstrategic.com</p>
+                            <p><a href="mailto:ahmad@rimalstrategic.com">ahmad@rimalstrategic.com</a></p>
                         </div>
                     </div>
-                </div>
-                <div class="contact-form">
-                    <form>
-                        <div class="form-group">
-                            <input type="text" placeholder="Your Name" required>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
                         </div>
-                        <div class="form-group">
-                            <input type="email" placeholder="Your Email" required>
+                        <div class="contact-details">
+                            <h4>Phone</h4>
+                            <p><a href="tel:+14695550123">+1 (469) 555-0123</a></p>
                         </div>
-                        <div class="form-group">
-                            <input type="text" placeholder="Company Name">
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fab fa-linkedin"></i>
                         </div>
-                        <div class="form-group">
-                            <select required>
-                                <option value="">Select Service Interest</option>
-                                <option value="product-roadmapping">Product Roadmapping</option>
-                                <option value="delivery-oversight">Delivery & Implementation Oversight</option>
-                                <option value="vendor-management">Vendor & Offshore Team Setup</option>
-                                <option value="digital-transformation">Digital Transformation</option>
-                                <option value="business-development">Pre-Sales & Business Development</option>
-                                <option value="it-advisory">IT Advisory</option>
-                            </select>
+                        <div class="contact-details">
+                            <h4>LinkedIn</h4>
+                            <p><a href="https://www.linkedin.com/company/rimal-strategic-advisory/" target="_blank">Rimal Strategic Advisory</a></p>
                         </div>
-                        <div class="form-group">
-                            <textarea placeholder="Tell us about your project" rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Send Message</button>
-                    </form>
+                    </div>
                 </div>
             </div>
         </div>

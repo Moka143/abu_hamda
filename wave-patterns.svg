@@ -1,0 +1,133 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2400 800" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <!-- Gradient definitions matching the website's color scheme -->
+    <linearGradient id="waveGradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" style="stop-color:#d4af37;stop-opacity:0.4" />
+        <stop offset="50%" style="stop-color:#f4d03f;stop-opacity:0.3" />
+        <stop offset="100%" style="stop-color:#cb9f62;stop-opacity:0.2" />
+      </linearGradient>
+    
+    <linearGradient id="waveGradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" style="stop-color:#f5d299;stop-opacity:0.3" />
+        <stop offset="50%" style="stop-color:#e8c98a;stop-opacity:0.25" />
+        <stop offset="100%" style="stop-color:#d4af37;stop-opacity:0.2" />
+      </linearGradient>
+    
+    <linearGradient id="waveGradient3" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" style="stop-color:#fae6c1;stop-opacity:0.25" />
+        <stop offset="50%" style="stop-color:#f5d299;stop-opacity:0.2" />
+        <stop offset="100%" style="stop-color:#e8c98a;stop-opacity:0.15" />
+      </linearGradient>
+    
+    <!-- Filter for subtle glow effect -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/> 
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background wave layers -->
+  <!-- Layer 1: Bottom wave -->
+  <path id="wave1" d="M0,400 C300,350 600,450 900,400 C1200,350 1500,450 1800,400 C2100,350 2300,425 2400,400 L2400,800 L0,800 Z" 
+        fill="url(#waveGradient1)" 
+        filter="url(#glow)">
+    <animateTransform
+      attributeName="transform"
+      type="translate"
+      values="-100,0; 100,0; -100,0"
+      dur="20s"
+      repeatCount="indefinite"/>
+  </path>
+  
+  <!-- Layer 2: Middle wave -->
+  <path id="wave2" d="M0,450 C200,400 400,500 600,450 C800,400 1000,500 1200,450 C1400,400 1600,500 1800,450 C2000,400 2200,500 2400,450 L2400,800 L0,800 Z" 
+        fill="url(#waveGradient2)" 
+        filter="url(#glow)">
+    <animateTransform
+      attributeName="transform"
+      type="translate"
+      values="100,0; -100,0; 100,0"
+      dur="15s"
+      repeatCount="indefinite"/>
+  </path>
+  
+  <!-- Layer 3: Top wave -->
+  <path id="wave3" d="M0,500 C150,475 300,525 450,500 C600,475 750,525 900,500 C1050,475 1200,525 1350,500 C1500,475 1650,525 1800,500 C1950,475 2100,525 2250,500 C2325,475 2362,525 2400,500 L2400,800 L0,800 Z" 
+        fill="url(#waveGradient3)" 
+        filter="url(#glow)">
+    <animateTransform
+      attributeName="transform"
+      type="translate"
+      values="-50,0; 50,0; -50,0"
+      dur="25s"
+      repeatCount="indefinite"/>
+  </path>
+  
+  <!-- Floating wave elements for additional movement -->
+  <g id="floatingWaves">
+    <path d="M100,200 Q200,150 300,200 T500,200" 
+          stroke="url(#waveGradient1)" 
+          stroke-width="2" 
+          fill="none" 
+          opacity="0.4">
+      <animateTransform
+        attributeName="transform"
+        type="translate"
+        values="0,0; 50,20; 0,0"
+        dur="12s"
+        repeatCount="indefinite"/>
+    </path>
+    
+    <path d="M700,150 Q800,100 900,150 T1100,150" 
+          stroke="url(#waveGradient2)" 
+          stroke-width="2" 
+          fill="none" 
+          opacity="0.3">
+      <animateTransform
+        attributeName="transform"
+        type="translate"
+        values="0,0; -30,15; 0,0"
+        dur="18s"
+        repeatCount="indefinite"/>
+    </path>
+    
+    <path d="M200,300 Q350,250 500,300 T800,300" 
+          stroke="url(#waveGradient3)" 
+          stroke-width="1.5" 
+          fill="none" 
+          opacity="0.2">
+      <animateTransform
+        attributeName="transform"
+        type="translate"
+        values="0,0; 40,10; 0,0"
+        dur="22s"
+        repeatCount="indefinite"/>
+    </path>
+  </g>
+  
+  <!-- Subtle particle effects -->
+  <g id="particles">
+    <circle cx="150" cy="250" r="2" fill="#d4af37" opacity="0.6">
+      <animate attributeName="cy" values="250;200;250" dur="8s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.6;0.2;0.6" dur="8s" repeatCount="indefinite"/>
+    </circle>
+    
+    <circle cx="400" cy="180" r="1.5" fill="#f5d299" opacity="0.5">
+      <animate attributeName="cy" values="180;130;180" dur="10s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.5;0.1;0.5" dur="10s" repeatCount="indefinite"/>
+    </circle>
+    
+    <circle cx="800" cy="220" r="2.5" fill="#e8c98a" opacity="0.4">
+      <animate attributeName="cy" values="220;170;220" dur="12s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.4;0.1;0.4" dur="12s" repeatCount="indefinite"/>
+    </circle>
+    
+    <circle cx="1000" cy="160" r="1" fill="#b8964f" opacity="0.7">
+      <animate attributeName="cy" values="160;110;160" dur="6s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.7;0.2;0.7" dur="6s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+</svg>
